@@ -12,20 +12,26 @@ The overview of the project
 
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/dashboard.png?raw=true)
 
-2. Product section - Here the user can create product update and delete
+<h3> Product section - Here the user can create product update and delete</h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/productpageview.png?raw=true)
 
-Add product 
+<h3>Add product </h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/productpageadd.png?raw=true)
 
-3. Location - Here the user can create location update and delete
+<h3> Location - Here the user can create location update and delete</h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/location.png?raw=true)
 
-Add Location
+<h3>Add Location</h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/locationadd.png?raw=true)
 
-3. Product Movement - Here the user can create Product movement update and delete
+<h3> Product Movement - Here the user can create Product movement update and delete</h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/productmovement.png?raw=true)
 
-Add Product movement
+<h3>Add Product movement</h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/productmovementadd.png?raw=true)
