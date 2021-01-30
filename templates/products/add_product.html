@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h1>Add Product</h1>
+        </div>
+    </div>
+
+    {% from 'includes/_formhelpers.html' import render_field %}
+    <div class="row ">
+        <div class="col-12">
+            <form action="" method="post" class="">
+                <div class="form-group">
+                    {{render_field(form.product_id,class_="form-control")}}
+                </div>
+                <div class="form-group">
+                    {{render_field(form.product_name,class_="form-control",id="editor")}}
+                </div>
+
+                <p><input type="submit" class="btn btn-primary" value="Submit"></p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

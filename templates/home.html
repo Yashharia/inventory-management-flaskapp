@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron p-5 text-center">
+    <h1 class="display-4 mb-4">Inventory Managment System</h1>
+    <h5 class="display-6">Dashboard</h5>
+</div>
+
+
+
+{% for productlocation in locations %}
+<div class="col  mt-5 bg-primary text-light pt-3 pb-1">
+    <h5> {{productlocation.location_id}} </h5>
+</div>
+<table class="table table-striped">
+    <tr>
+        <th>Product</th>
+        <th>Warehouse</th>
+        <th>Quantity</th>
+    </tr>
+    {% for product in values %}
+    {% if productlocation.location_id == product.to_location%}
+    <tr>
+        <td>{{product.product_id}} </td>
+        <td> {{product.to_location}} </td>
+        <td>{{product.totalstock}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+{% endfor %}
+
+
+
+{% endblock %}

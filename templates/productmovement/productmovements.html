@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1 class="mb-4">Product Movement</h1>
+{% if productmovements != null %}
+<table class="table table-striped">
+    <tr>
+        <th>Movement ID</th>
+        <th>Product ID</th>
+        <th>From Location</th>
+        <th>To Location</th>
+        <th>Quantity</th>
+        <th width="10%"></th>
+        <th width="10%"></th>
+    </tr>
+
+    {% for productmovement in productmovements %}
+    <tr>
+        <td>{{productmovement.movement_id}} </td>
+        <td>{{productmovement.product_id}} </td>
+        <td> {{productmovement.from_location}} </td>
+        <td> {{productmovement.to_location}} </td>
+        <td> {{productmovement.qty}} </td>
+        <td class="text-right"><a href="edit_productmovement/{{productmovement.movement_id}}"
+                class="btn btn-primary pull-right">Edit</a>
+        </td>
+        <td>
+            <form action="{{url_for('delete_productmovement',id=productmovement.movement_id)}}" method="post">
+                <input type="submit" name="" class="btn btn-danger" value="Delete">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<div class="text-center">
+    <h5 class="text-center">
+        No Product Movement
+    </h5>
+    <a href="/add_productmovement" class="btn btn-primary"> Add Product Movement</a>
+</div>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1 class="mb-4">Locations</h1>
+{% if locations != null %}
+<table class="table table-striped">
+    <tr>
+        <th>Location ID</th>
+        <th>Location Name</th>
+        <th width="10%"></th>
+        <th width="10%"></th>
+    </tr>
+
+    {% for location in locations %}
+    <tr>
+        <td>{{location.location_id}} </td>
+        <td> {{location.location_name}} </td>
+        <td class="text-right"><a href="edit_location/{{location.location_id}}"
+                class="btn btn-primary pull-right">Edit</a>
+        </td>
+        <td>
+            <form action="{{url_for('delete_location',id=location.location_id)}}" method="post">
+                <input type="hidden" name="method" value="DELETE">
+                <input type="submit" name="" class="btn btn-danger" value="Delete">
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<div class="text-center">
+    <h5 class="text-center">
+        No locations
+    </h5>
+    <a href="/add_location" class="btn btn-primary"> Add locations</a>
+</div>
+{% endif %}
+
+
+{% endblock %}
