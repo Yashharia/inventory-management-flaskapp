@@ -9,6 +9,7 @@ The overview of the project
 4. User can see the final report of how many products are avaiable at the destination
 
 <h3> Dashboard Page - here the user can see the complete report.</h3>
+
 ![alt text](https://github.com/YashHaria/inventory-management-flaskapp/blob/master/screenshots/dashboard.png?raw=true)
 
 2. Product section - Here the user can create product update and delete
